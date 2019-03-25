@@ -1,1 +1,93 @@
-// Mixins Here
+/* **********************************************************************
+*                              DISPLAY MIXINS                           *
+*************************************************************************/
+.flex(@direction: row, @justify: flex-start, @align: center) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+/* **********************************************************************
+*                             COMPONENT MIXINS                          *
+*************************************************************************/
+.btn-styles(@width: 100px, @height: 35px) {
+    .flex(center, center);
+    width: @width;
+    height: @height;
+
+    border-radius: 5px;
+
+    color: @btn-font-color;
+    font-size: 1.8rem;
+
+    background-color: @btn-bg-color;
+
+    &:hover { 
+        cursor: pointer;
+        border: 1px solid @btn-bg-color;
+        color: @btn-bg-color;
+    
+        background-color: @btn-font-color;
+    
+        transition: border 150ms linear,
+                    color  150ms linear,
+                    background-color 150ms linear;
+    }
+}
+
+.img-styles(@width: 100%, @height: auto, @margin: 0, @radius: 0) { 
+    width: @width;
+    height: @height;
+    
+    margin: @margin;
+    border-radius: @radius;
+}
+
+/* **********************************************************************
+*                            MEDIA QUERY MIXINS                         *
+*************************************************************************/
+.content-mobile(@className: 'default') {
+
+    & when (@className = 'default') {
+        .mobile-img {
+            display: block;
+            width: 92%;
+            margin: 2rem;
+            border-radius: 20px;
+        }
+    }
+
+    & when (@className = 'space-images') {
+        display: none;
+    }
+
+    & when (@className = 'walk') {
+        .flex(column-reverse);
+        margin-top: 2rem;
+        padding: 2rem;
+
+        .walk-text, .walk-img {
+            width: 100%;
+            margin: 0;
+
+            .btn { .btn-styles(100%; 7rem) }
+        }
+
+        .walk-text { margin-top: 1.5rem }
+    }
+}
+/* **********************************************************************
+*                          CSS ANIMATION MIXINS                         *
+*************************************************************************/
+.home-fadein-animation() {
+    .intro         { animation: fadein 1s    }
+    .space-images  { animation: fadein 1.75s }
+    .visit-planets { animation: fadein 2.50s }
+    .walk          { animation: fadein 3.25s }
+
+    @keyframes fadein {
+        from { opacity: 0 }
+        to   { opacity: 1 }
+    }
+}

@@ -34,13 +34,40 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+An adaptive website uses media queries to change its layout to fit targeted screen resolutions. 
+It is not fluid however, meaning it doesn’t respond to all screen resolutions.
+
+A responsive website uses media queries to change its layout to fit targeted screen resolutions 
+with the additional property of being fluid. A responsive designed website will look good at any 
+resolution.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+Mobile first means the site is specifically designed with mobile-users in mind. It uses min-width 
+media queries versus max-width media queries, and builds on the mobile design as the screen resolution 
+grows.
+
+Desktop first means the site is specifically designed with desktop-users in mind. It uses max-width 
+media queries versus min-width media queries, and draws back from the desktop design as the screen 
+resolution diminishes.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+Font-size 62.5% sets the default font-size of the page to 10px. This allows rem units to have a 1:10 
+relationship to pixels where 1rem unit translates to 10px. This allows developers to “think” in terms 
+of pixels when using rem units.
+
 4. How would you describe preprocessing to someone new to CSS?
 
+Preprocessing is the method used to compile language-extended CSS style-sheets to the lower-level CSS 
+understood by a browser’s engine. With preprocessing, language extensions like LESS and SASS can be utilized 
+to the benefit of developers seeking draft leaner, more readable style-sheets.
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+My favorite concepts in preprocessing are mixins/parametric-mixins coupled with nesting. I’ve found that 
+using mixins has offered the most benefit in writing cleaner code especially when it comes to changing 
+layouts for targeted screen resolutions. 
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 

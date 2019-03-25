@@ -1,1 +1,33 @@
-// Navigation code here
+/* **********************************************************************
+*                            HEADER/NAVIGATION                          *
+*************************************************************************/
+header.nav {
+    .flex(column, space-around);
+    position: fixed;
+    z-index: 1;
+    opacity: .9;
+
+    width: 100%;
+    height: 10rem;
+
+    border-bottom: 2px solid @nav-border;
+
+    background-color: @nav-bg;
+
+    h1 {
+        font-size: 4.0rem;
+    }
+
+    nav {
+        .flex(@justify: space-around);
+        width: 100%;
+        max-width: 400px;
+
+        a {
+            font-family: @nav-font;
+            font-size: 1.6rem;
+            color: @nav-font-color;
+            text-decoration: none;
+        }
+    }
+}
