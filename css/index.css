@@ -1,3 +1,12 @@
+/* **********************************************************************
+*                              COLOR VARS                               *
+*************************************************************************/
+/* **********************************************************************
+*                            COLOR POINTERS                             *
+*************************************************************************/
+/* **********************************************************************
+*                              DISPLAY MIXIN                            *
+*************************************************************************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -160,6 +169,35 @@ p {
   width: 100%;
   margin: 0 auto;
 }
+/* **********************************************************************
+*                            HEADER/NAVIGATION                          *
+*************************************************************************/
+header.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #F6F6F6;
+  height: 11rem;
+  border-bottom: 2px solid #F1F1F1;
+}
+header.nav h1 {
+  font-size: 4rem;
+}
+header.nav nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+header.nav nav a {
+  font-family: #454A59;
+  font-size: 1.6rem;
+  color: #22283B;
+  text-decoration: none;
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -170,6 +208,9 @@ footer {
   justify-content: center;
   align-items: center;
 }
+/* **********************************************************************
+*                                   HOME                                *
+*************************************************************************/
 .home .intro h2 {
   padding: 15px;
 }
@@ -211,6 +252,18 @@ footer {
 }
 .home .walk .walk-text p {
   margin-bottom: 26px;
+}
+.home .walk .walk-text .btn {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 35px;
+  background-color: #22283A;
+  color: #FFF;
+  font-size: 1.8rem;
+  border-radius: 5px;
 }
 .home .walk .walk-img {
   width: 46%;
