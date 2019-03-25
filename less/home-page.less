@@ -4,6 +4,10 @@
 .home {
   .intro {
 
+    img {
+      width: 100%;
+    }
+
     h2 {
       padding: 15px;
     }
@@ -11,7 +15,12 @@
     p {
       padding:0 15px;
     }
-  
+    
+    .mobile-img {
+      margin: 2rem;
+      width: 92%;
+      border-radius: 20px;
+    }
   }
 
   .space-images {
@@ -24,6 +33,10 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+    }
+
+    @media @phone {
+      display: none;
     }
   }
 
@@ -60,6 +73,12 @@
       .btn {
         .btn-styles();
       }
+
+      @media @phone {
+        width: 100%;
+        margin-top: 2rem;
+        padding: 0 2rem;
+      }
     }
 
     .walk-img {
@@ -71,6 +90,14 @@
         height: auto;
         border-radius: 10px;
       }
+
+      @media @phone {
+        width: 100%;
+      }
+    }
+
+    @media @phone {
+      .flex(column-reverse);
     }
   }
 }// home
