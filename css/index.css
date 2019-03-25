@@ -5,7 +5,10 @@
 *                            COLOR POINTERS                             *
 *************************************************************************/
 /* **********************************************************************
-*                              DISPLAY MIXIN                            *
+*                              DISPLAY MIXINS                           *
+*************************************************************************/
+/* **********************************************************************
+*                             COMPONENT MIXINS                          *
 *************************************************************************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -178,7 +181,7 @@ header.nav {
   justify-content: space-around;
   align-items: center;
   background-color: #F6F6F6;
-  height: 11rem;
+  height: 10rem;
   border-bottom: 2px solid #F1F1F1;
 }
 header.nav h1 {
@@ -187,10 +190,10 @@ header.nav h1 {
 header.nav nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
 }
 header.nav nav a {
   font-family: #454A59;
@@ -261,9 +264,15 @@ footer {
   width: 100px;
   height: 35px;
   background-color: #22283A;
-  color: #FFF;
+  color: #FFFFFF;
   font-size: 1.8rem;
   border-radius: 5px;
+}
+.home .walk .walk-text .btn:hover {
+  background-color: #FFFFFF;
+  color: #22283A;
+  border: 1px solid #22283A;
+  cursor: pointer;
 }
 .home .walk .walk-img {
   width: 46%;
