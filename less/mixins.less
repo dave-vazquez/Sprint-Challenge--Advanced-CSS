@@ -15,15 +15,62 @@
     .flex(center, center);
     width: @width;
     height: @height;
-    background-color: @btn-bg-color;
-    color: @btn-font-color;
-    font-size: 1.8rem;
+
     border-radius: 5px;
 
+    color: @btn-font-color;
+    font-size: 1.8rem;
+
+    background-color: @btn-bg-color;
+
     &:hover {
-        background-color: @btn-font-color;
-        color: @btn-bg-color;
-        border: 1px solid @btn-bg-color;
         cursor: pointer;
+
+        border: 1px solid @btn-bg-color;
+        color: @btn-bg-color;
+
+        background-color: @btn-font-color;
+    }
+}
+
+.img-styles(@width: 100%, @height: auto, @margin: 0, @radius: 0) { 
+    width: @width;
+    height: @height;
+    
+    margin: @margin;
+    border-radius: @radius;
+}
+
+/* **********************************************************************
+*                            MEDIA QUERY MIXINS                         *
+*************************************************************************/
+.content-mobile(@className: 'default') {
+
+    & when (@className = 'default') {
+        .mobile-img {
+            display: block;
+            width: 92%;
+            margin: 2rem;
+            border-radius: 20px;
+        }
+    }
+
+    & when (@className = 'space-images') {
+        display: none;
+    }
+
+    & when (@className = 'walk') {
+        .flex(column-reverse);
+        margin-top: 2rem;
+        padding: 2rem;
+
+        .walk-text, .walk-img {
+            width: 100%;
+            margin: 0;
+
+            .btn { .btn-styles(100%; 7rem) }
+        }
+
+        .walk-text { margin-top: 1.5rem }
     }
 }

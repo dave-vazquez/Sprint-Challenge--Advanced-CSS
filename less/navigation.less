@@ -3,9 +3,14 @@
 *************************************************************************/
 header.nav {
     .flex(column, space-around);
-    background-color: @nav-bg;
+    position: fixed;
+
+    width: 100%;
     height: 10rem;
+
     border-bottom: 2px solid @nav-border;
+    
+    background-color: @nav-bg;
 
     h1 {
         font-size: 4.0rem;
@@ -14,7 +19,7 @@ header.nav {
     nav {
         .flex(@justify: space-around);
         width: 100%;
-        max-width: 380px;
+        max-width: 400px;
 
         a {
             font-family: @nav-font;
